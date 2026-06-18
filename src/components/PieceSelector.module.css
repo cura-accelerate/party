@@ -1,0 +1,72 @@
+.wrapper {
+  background: rgba(255,255,255,0.7);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+  border: 1.5px solid #E8C99A;
+}
+
+.label {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #8B6A4F;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.pieces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.pieceButton {
+  background: #FDF6EC;
+  border: 2px solid #E8C99A;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+  min-width: 64px;
+}
+
+.pieceButton:hover {
+  transform: translateY(-2px);
+  border-color: #C4956A;
+}
+
+.pieceButton.selected {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.pieceGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.pieceRow {
+  display: flex;
+  gap: 1px;
+}
+
+.pieceCell {
+  border-radius: 2px;
+}
+
+.pieceName {
+  font-size: 0.7rem;
+  color: #8B6A4F;
+  font-weight: 600;
+}

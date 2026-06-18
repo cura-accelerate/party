@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.7);
+  border: 2px solid #E8C99A;
+  border-radius: 16px;
+  padding: 10px 16px;
+  min-width: 130px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.player.active {
+  background: rgba(255,255,255,0.95);
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #3D2B1F;
+}
+
+.score {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.arrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #8B6A4F;
+  margin-left: auto;
+}
