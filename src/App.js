@@ -30,11 +30,8 @@ export default function App() {
   const [gameOver, setGameOver] = useState(false);
   const [skipCount, setSkipCount] = useState(0);
   const [lastMessage, setLastMessage] = useState('');
-  const [placedCount, setPlacedCount] = useState(0);
-
   const scores = calculateScores(board);
   const filledCells = Object.values(scores).reduce((a, b) => a + b, 0);
-  const remainingCells = TOTAL_BEAR_CELLS - filledCells;
 
   const handleCellClick = useCallback((row, col) => {
     if (!selectedPiece || gameOver) return;
@@ -49,7 +46,6 @@ export default function App() {
       setPieces(newPieces);
       setSelectedPiece(null);
       setHoveredCell(null);
-      setPlacedCount(prev => prev + 1);
       setLastMessage(`✨ ${selectedPiece.cells.length}マス置いたよ！`);
       setSkipCount(0);
 
@@ -84,7 +80,6 @@ export default function App() {
     setGameOver(false);
     setSkipCount(0);
     setLastMessage('');
-    setPlacedCount(0);
   };
 
   const winner = gameOver
